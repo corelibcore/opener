@@ -201,7 +201,7 @@ fn open_not_windows(
         .args(extra_args)
         .arg(path)
         .stdin(stdin_type)
-        .stdout(Stdio::null())
+        .stdout(Stdio::inherit())
         .stderr(Stdio::piped())
         .spawn()?;
 
