@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `open_browser()`, which uses the `$BROWSER` environment variable before falling back to `open()`.
+### Changed
+- The command name in the `OpenError::ExitStatus` variant is now returned as a `Cow<'static, str>` instead of a
+`&'static str`.
 ### Removed
 - `impl From<io::Error> for OpenError`.
 
